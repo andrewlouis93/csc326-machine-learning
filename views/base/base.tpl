@@ -9,24 +9,22 @@
 	</head>
 	<body>
 		<div class="site-wrapper">
-		  <div class="site-wrapper-inner">
+				<div class="masthead clearfix">
+					<div class="inner">
+						<h3 class="masthead-brand">west</h3>
+						<nav>
+							<ul class="nav masthead-nav">
+								<li class="active"><a href="/">home</a></li>
+								<li><a href="/most-searched">most searched</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
 		    <div class="cover-container">
-		      <div class="masthead clearfix">
-		        <div class="inner">
-		          <h3 class="masthead-brand">west</h3>
-		          <nav>
-		            <ul class="nav masthead-nav">
-		              <li class="active"><a href="/">home</a></li>
-		              <li><a href="/most-searched">most searched</a></li>
-		            </ul>
-		          </nav>
-		    		</div>
-		      </div>
 		      <div class="inner cover">
 						{{!base}}
 					</div>
 				</div>
-			</div>
 		</div>
 	</body>
 </html>

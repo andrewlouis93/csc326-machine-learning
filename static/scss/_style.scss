@@ -47,10 +47,10 @@ body {
   background-size: 100% 100%;
 }
 .site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
+
 }
 .cover-container {
+  margin-top: 10%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -188,12 +188,13 @@ body {
 }
 
 .results-search{
-  position: absolute;
-  width: 60%;
-  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
   left: 0;
   right: 0;
-  top: 20%;
 }
 
 @media (max-width: 991px){
@@ -219,6 +220,7 @@ body {
 
 .table-ctr{
   width: 80%;
+  margin-top:5%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -268,4 +270,8 @@ body {
   font-weight: bold;
   display: block;
   position: relative;
+}
+
+.masthead{
+  width:100% !important;
 }
