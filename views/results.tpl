@@ -1,25 +1,48 @@
 % rebase('base/base.tpl')
 
-<form class="form-inherit" method="POST" action="/query">
-  <div class="mdl-grid">
-      <div class="mdl-cell mdl-cell--8-col">
-        <div class="mdl-textfield mdl-js-textfield">
-          <input id="query" class="mdl-textfield__input" type="text" name="query" />
-          <label class="mdl-textfield__label" for="query">your search goes here...</label>
-        </div>
+
+<form class="results-search" method="GET" action="/">
+  <div class="row">
+    <div class="col-md-8 limited-padding">
+      <div class="input-group input-group-lg search-ctr-results">
+        <input type="text" name="keywords" class="form-control search-bar" value="{{query_str}}">
       </div>
-      <div class="mdl-cell mdl-cell--4-col">
-        <input type="submit" />
-      </div>
+    </div>
+    <div class="col-md-4 limited-padding">
+      <input type="submit" class="btn btn-lg btn-default westit-results" value="west it" />
+    </div>
   </div>
 </form>
 
-<ul>
-    % if results:
-      % for it in results:
-        <li>
-          {{it[0]}} - {{it[1]}}
-        </li>
-      % end
-    % end
-</ul>
+% if results:
+<div class="table-ctr">
+  <div class="row table-titles">
+    <div class="col-xs-6 col-sm-6 col-md-6 lead">
+      <span class="thick-header">
+        word
+      </span>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 lead">
+      <span class="thick-header">
+        count
+      </span>
+    </div>
+  </div>
+  <table id="results" class="row ref-table">
+    <tbody>
+  % for it in results:
+    <tr>
+      <td class="col-xs-6 col-sm-6 col-md-6 lead">
+        {{it[0]}}
+      </td>
+      <td class="col-xs-6 col-sm-6 col-md-6 lead">
+        <div class="count-badge">
+          {{it[1]}}
+        </div>
+      </td>
+    </tr>
+  % end
+  </tbody>
+  </table>
+</div>
+% end

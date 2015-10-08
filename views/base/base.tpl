@@ -1,21 +1,32 @@
 <doctype html>
 <html>
 	<head>
-		<link rel="stylesheet" href="material.teal-red.min.css">
+		<link rel="stylesheet" href="/static/scss/style.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" href="/static/css/style.css">
-		<script src="static/material/material.min.js"></script>
-		<title>boketto | for all your word counting needs</title>
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<title> west | for all your word counting needs </title>
 	</head>
 	<body>
-		<div class="mdl-layout mdl-js-layout">
-		<h1 class="mdl-layout-title brand">boketto</h1>
-		<hr />
-		<main class="mdl-layout__content">
-				<div class="page-content">
-					{{!base}}
+		<div class="site-wrapper">
+		  <div class="site-wrapper-inner">
+		    <div class="cover-container">
+		      <div class="masthead clearfix">
+		        <div class="inner">
+		          <h3 class="masthead-brand">west</h3>
+		          <nav>
+		            <ul class="nav masthead-nav">
+		              <li class="active"><a href="/">home</a></li>
+		              <li><a href="/most-searched">most searched</a></li>
+		            </ul>
+		          </nav>
+		    		</div>
+		      </div>
+		      <div class="inner cover">
+						{{!base}}
+					</div>
 				</div>
-		</main>
+			</div>
 		</div>
 	</body>
 </html>
