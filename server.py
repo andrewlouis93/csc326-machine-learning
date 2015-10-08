@@ -1,18 +1,17 @@
-from bottle import route, run, template, request, redirect
+from bottle import route, run, template, request, redirect, static_file
 from modules.frequency import str_frequency
 
-@route('/')
-def index():
-	redirect('/query')
-
-@route('/query', method='POST')
-def query():
-		query = request.forms.get('query')
-		query_freq = str_frequency(query)
-		return template('views/index.tpl',results=query_freq)
-
-@route('/query', method='GET')
+@route('/', method='GET')
 def query(results=None):
-		return template('views/index.tpl',results=None)
+		query = request.query.get('keywords')
+		if (query):
+			query_freq = str_frequency(query)
+			return template('views/results.tpl',results=query_freq)
+		else:
+			return template('views/landing.tpl')
+
+@route('/static/<filepath:path>')
+def server_static(filepath):
+    return static_file(filepath, root='./static')
 
 run (host='localhost',port=3000, debug=True)
