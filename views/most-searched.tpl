@@ -17,14 +17,14 @@
   </div>
   <table id="history" class="row ref-table">
     <tbody>
-  % for it in results:
+  % for res in results:
     <tr>
       <td class="col-xs-6 col-sm-6 col-md-6 lead">
-        {{it[0]}}
+        {{res[0]}}
       </td>
       <td class="col-xs-6 col-sm-6 col-md-6 lead">
         <div class="count-badge">
-          {{it[1]}}
+          {{res[1]}}
         </div>
       </td>
     </tr>
