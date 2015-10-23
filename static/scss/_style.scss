@@ -279,3 +279,12 @@ body {
 .masthead{
   width:100% !important;
 }
+
+.inactive{
+  font-size: 13px !important;
+}
+
+.inactive:hover{
+  cursor: default !important;
+  border: none !important;
+}

@@ -24,6 +24,20 @@ def cache_update(_string, _cache):
         _cache[word] = (_cache[word]+1) if (word in _cache) else 1
     return _cache
 
+# Keeps a list of users and their last 10 recently searched words.
+def users_cache_update(_string, _cache, _email):
+    wordList = set( re.findall('\w+',_string.lower()) )
+    if (_email not in _cache):
+        _cache[_email] = []
+    for word in wordList:
+        if (word in _cache[_email]):
+            _cache[_email].remove(word)
+            _cache[_email].insert(0 ,word)
+        else:
+            _cache[_email].insert(0 ,word)
+    _cache[_email] = _cache[_email][0:10]
+    return _cache
+
 # Returns a tuple of the top 20 most relevant
 # results from the cache.
 def top_twenty(_cache):

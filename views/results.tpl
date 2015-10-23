@@ -45,3 +45,28 @@
   </table>
 </div>
 % end
+
+% if last_ten:
+<div class="table-ctr">
+  <div class="row table-titles">
+    <div class="col-xs-12 col-sm-12 col-md-12 lead">
+      <span class="thick-header">
+        recently searched words
+      </span>
+    </div>
+  </div>
+  <table id="last_ten" class="row ref-table">
+    <tbody>
+  % for it in last_ten:
+    <tr>
+      <td class="col-xs-12 col-sm-12 col-md-12 lead">
+        {{it}}
+      </td>
+    </tr>
+  % end
+  </tbody>
+  </table>
+</div>
+<br/>
+<br/>
+% end
