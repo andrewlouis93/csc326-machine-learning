@@ -229,6 +229,22 @@ body {
   margin-right: auto;
 }
 
+.dual-table{
+  margin-top:5%;
+  display: inline-block;
+  float: left;
+}
+
+.table-ctr-2-2{
+  @extend .dual-table;
+  width: 66.6%;
+}
+
+.table-ctr-2-1{
+  @extend .dual-table;
+  width: 33.3%;
+}
+
 .ref-table{
   display: block;
   width: 100%;

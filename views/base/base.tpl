@@ -14,16 +14,29 @@
 						<h3 class="masthead-brand">west</h3>
 						<nav>
 							<ul class="nav masthead-nav">
-								% if (session) and ('user_data' in session) and (session['auth']):
+
+								% if logged_in:
 								<li><a class="inactive">{{session['user_data']['email']}}</a></li>
 								% else:
 								<li><a href="/auth/google">sign in</a></li>
 								% end
-								<li class="active"><a href="/">home</a></li>
-								% if (session) and ('user_data' in session) and (session['auth']):
-								<li><a href="/most-searched">most searched</a></li>
+
+								% if path == '/':
+								<li class="active">
+								% else:
+								<li>
+								% end
+								<a href="/">home</a></li>
+								% if logged_in:
+								% if path == '/most-searched':
+								<li class="active">
+								% else:
+								<li>
+								% end
+								<a href="/most-searched">most searched</a></li>
 								<li><a href="/logout">sign out</a></li>
 								% end
+
 							</ul>
 						</nav>
 					</div>

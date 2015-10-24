@@ -1,6 +1,5 @@
 % rebase('base/base.tpl')
 
-
 % if results:
 <div class="table-ctr">
   <div class="row table-titles">
